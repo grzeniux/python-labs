@@ -21,4 +21,3 @@ def list_files_recursive(directory):
 
 directory_path = r'C:\Users\grzen\Desktop\Jazda\Notepads'
 list_files_recursive(directory_path)
-
