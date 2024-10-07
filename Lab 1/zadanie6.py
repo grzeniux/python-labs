@@ -1,5 +1,7 @@
-# Zadanie 6
-# Napisz skrypt sortujący liczby (dwoma wybranymi metodami). 
-# Wygeneruj losowo N liczb - wykorzystaj standardową funkcję do losowania. 
-# Z wbudowanej funkcji sortującej korzystaj tylko w celu weryfikacji wyników. 
+# Zadanie 7
+# Zaimplementuj klasę, która będzie realizowała strukturę drzewa 
+# (powinna posiadać funkcję przechodzenia wszystkich węzłów drzewa, 
+# węzły powinny mieć możliwość przechowywania wartości, 
+# krawędzie także mogą zawierać wartości lub być oznaczone), klasa powinna mieć zdefiniowaną funkcję __str__
+
 
