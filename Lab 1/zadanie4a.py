@@ -9,10 +9,8 @@ import re
 import os
 
 def replace_words_with_regex(text, replacement_dict):
-    # Tworzymy wyrażenie regularne, które dopasuje każde słowo-klucz ze słownika replacement_dict
     pattern = r'\b(' + '|'.join(re.escape(word) for word in replacement_dict.keys()) + r')\b'
     
-    # Funkcja pomocnicza do zamiany słowa na odpowiednik ze słownika
     def replace_match(match):
         return replacement_dict[match.group(0)]
     replaced_text = re.sub(pattern, replace_match, text)
