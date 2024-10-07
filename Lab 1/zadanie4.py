@@ -37,5 +37,3 @@ replacement_dict = {
 }  
 
 replace_words_in_file(input_file, output_file, replacement_dict)
-
-
