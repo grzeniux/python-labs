@@ -35,12 +35,11 @@ def merge_sort(data):
     
     return merge(left, right)
 
-def parallel_sort(data, num_processes=None):
+def parallel_sort(data):
     """
     Funkcja inicjująca równoległe sortowanie dla danych wejściowych.
     """
-    if num_processes is None:
-        num_processes = min(multiprocessing.cpu_count(), len(data))  # Ustal liczbę procesów, ale nie więcej niż liczba elementów
+    num_processes = min(multiprocessing.cpu_count(), len(data))  # Ustalenie liczby procesów, ale nie więcej niż liczba elementów
     chunk_size = len(data) // num_processes
 
     # Podzielenie danych na części dla poszczególnych procesów
@@ -48,15 +47,20 @@ def parallel_sort(data, num_processes=None):
     if len(data) % num_processes:
         chunks.append(data[num_processes * chunk_size:])
 
+    print(f"Chunks przed sortowaniem: {chunks[:2]}")
+
+    # Tworzenie puli procesów i sortowanie poszczególnych części równolegle
     with Pool(processes=num_processes) as pool:
         sorted_chunks = pool.map(merge_sort, [chunk for chunk in chunks if chunk])
 
+    print(f"Posortowane fragmenty: {sorted_chunks[:2]}") 
+
+    # Scalenie posortowanych fragmentów
     sorted_data = sorted_chunks[0]
     for chunk in sorted_chunks[1:]:
         sorted_data = merge(sorted_data, chunk)
     
     return sorted_data
-
 
 if __name__ == '__main__':
     import random
