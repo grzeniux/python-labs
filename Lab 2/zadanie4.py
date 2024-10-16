@@ -7,7 +7,7 @@
 class Fibonacci:
     def __init__(self, steps):
         self.steps = steps      # liczba wyrazów ciągu
-        self.current_step = 0   # aktualny krok
+        self.current_step = 0   
         self.a, self.b = 0, 1   # pierwsze dwie liczby Fibonacciego
 
     def __iter__(self):
