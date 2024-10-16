@@ -1,4 +1,4 @@
-# Zadanie 7
+# Zadanie 6
 # Zaimplementuj klasę, która będzie realizowała strukturę drzewa 
 # (powinna posiadać funkcję przechodzenia wszystkich węzłów drzewa, 
 # węzły powinny mieć możliwość przechowywania wartości, 
@@ -6,8 +6,8 @@
 
 class TreeNode:
     def __init__(self, value):
-        self.value = value  # Wartość węzła, np. marka auta, karoseria, silnik
-        self.children = {}  # Dzieci węzła, w formie {child_node: edge_value}
+        self.value = value
+        self.children = {}
 
     def add_child(self, child_node, edge_value=None):
         """Dodajemy dziecko do węzła z opcjonalną wartością krawędzi."""

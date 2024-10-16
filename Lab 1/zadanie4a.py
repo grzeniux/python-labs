@@ -1,4 +1,4 @@
-# Zadanie 3
+# Zadanie 4a
 # Wykonaj to zadanie wykorzystując pakiet wyrażeń regularnych - re
 # Napisz skrypt zmieniający w podanym ciągu wejściowym 
 # (można plik wygenerować samemu lub sciągnąć np. z portalu informacyjnego) 
